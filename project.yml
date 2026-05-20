@@ -1,0 +1,35 @@
+name: SiftRAW
+options:
+  bundleIdPrefix: com.jileihao
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ENABLE_HARDENED_RUNTIME: YES
+    DEAD_CODE_STRIPPING: YES
+targets:
+  SiftRAW:
+    type: application
+    platform: macOS
+    sources:
+      - path: SiftRAW
+        excludes:
+          - "Info.plist"
+          - "SiftRAW.entitlements"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jileihao.SiftRAW
+        PRODUCT_NAME: SiftRAW
+        INFOPLIST_FILE: SiftRAW/Info.plist
+        CODE_SIGN_ENTITLEMENTS: SiftRAW/SiftRAW.entitlements
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "-"
+        DEVELOPMENT_TEAM: ""
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        COMBINE_HIDPI_IMAGES: YES
+        ENABLE_PREVIEWS: YES
+        SWIFT_EMIT_LOC_STRINGS: YES

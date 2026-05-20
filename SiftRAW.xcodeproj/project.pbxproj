@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B88FF228AB3BF21C687D79 /* Applier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354EA034CF1990E5B5780347 /* Applier.swift */; };
+		108AE1E6CAC20AB7DCC9BBF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33AB0EEF0BAC60D89DAA2EF /* ContentView.swift */; };
+		153899C1AB212570F9D8E1FF /* CullSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6D8CD5971C93AE3D3AE75 /* CullSession.swift */; };
+		2D66C8FEABB9F60E014F8A97 /* ThumbnailStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789295895AB384010FDA508 /* ThumbnailStrip.swift */; };
+		42F12D5B91B1E4C52818458A /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F00508A0CEBA5E43BB262D /* ToolbarView.swift */; };
+		64977E666F7F0B62511A9551 /* SiftRAWApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533E2399476E72777D815A0 /* SiftRAWApp.swift */; };
+		955C2C242C0AD7EA54E8196A /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA88DDAA0C91B7671A0B06A /* PhotoView.swift */; };
+		A0FB6D0A4B85E96924AEDC2E /* PreviewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F139FEF6119AB1FCAF44D /* PreviewLoader.swift */; };
+		DC3E24F653541B13E0679F77 /* PhotoScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920874A9D4D26AA331010068 /* PhotoScanner.swift */; };
+		EE1555AC839DB3DA420CA60A /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38AA6AAAEE0AE5CF4CF996 /* PhotoGroup.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1533E2399476E72777D815A0 /* SiftRAWApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiftRAWApp.swift; sourceTree = "<group>"; };
+		1C38AA6AAAEE0AE5CF4CF996 /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
+		354EA034CF1990E5B5780347 /* Applier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applier.swift; sourceTree = "<group>"; };
+		3789295895AB384010FDA508 /* ThumbnailStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailStrip.swift; sourceTree = "<group>"; };
+		4D1F139FEF6119AB1FCAF44D /* PreviewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLoader.swift; sourceTree = "<group>"; };
+		91B6D8CD5971C93AE3D3AE75 /* CullSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CullSession.swift; sourceTree = "<group>"; };
+		920874A9D4D26AA331010068 /* PhotoScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScanner.swift; sourceTree = "<group>"; };
+		EEA88DDAA0C91B7671A0B06A /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		F33AB0EEF0BAC60D89DAA2EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4F00508A0CEBA5E43BB262D /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
+		FD4B7DACE2A028F18D50857E /* SiftRAW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiftRAW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		10162E1245D9EA5D3895B631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				354EA034CF1990E5B5780347 /* Applier.swift */,
+				91B6D8CD5971C93AE3D3AE75 /* CullSession.swift */,
+				1C38AA6AAAEE0AE5CF4CF996 /* PhotoGroup.swift */,
+				920874A9D4D26AA331010068 /* PhotoScanner.swift */,
+				4D1F139FEF6119AB1FCAF44D /* PreviewLoader.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AC31370DA47B5D234558C9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEA88DDAA0C91B7671A0B06A /* PhotoView.swift */,
+				3789295895AB384010FDA508 /* ThumbnailStrip.swift */,
+				F4F00508A0CEBA5E43BB262D /* ToolbarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78BECDE0A9C106E3E3A06A2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD4B7DACE2A028F18D50857E /* SiftRAW.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94B11C70D3EECAB340D4B8F9 = {
+			isa = PBXGroup;
+			children = (
+				B2B235C331CB2025B0102C32 /* SiftRAW */,
+				78BECDE0A9C106E3E3A06A2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2B235C331CB2025B0102C32 /* SiftRAW */ = {
+			isa = PBXGroup;
+			children = (
+				F33AB0EEF0BAC60D89DAA2EF /* ContentView.swift */,
+				1533E2399476E72777D815A0 /* SiftRAWApp.swift */,
+				10162E1245D9EA5D3895B631 /* Model */,
+				3AC31370DA47B5D234558C9B /* Views */,
+			);
+			path = SiftRAW;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FF7D1DF80C675835DA494B6 /* SiftRAW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C070F8E72AB77F6B332CD58 /* Build configuration list for PBXNativeTarget "SiftRAW" */;
+			buildPhases = (
+				0A3D2F2398AB296397816050 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiftRAW;
+			packageProductDependencies = (
+			);
+			productName = SiftRAW;
+			productReference = FD4B7DACE2A028F18D50857E /* SiftRAW.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8186F23ED148518467317948 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4FF7D1DF80C675835DA494B6 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 75BF4B5128B23765928A07A5 /* Build configuration list for PBXProject "SiftRAW" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 94B11C70D3EECAB340D4B8F9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FF7D1DF80C675835DA494B6 /* SiftRAW */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A3D2F2398AB296397816050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B88FF228AB3BF21C687D79 /* Applier.swift in Sources */,
+				108AE1E6CAC20AB7DCC9BBF8 /* ContentView.swift in Sources */,
+				153899C1AB212570F9D8E1FF /* CullSession.swift in Sources */,
+				EE1555AC839DB3DA420CA60A /* PhotoGroup.swift in Sources */,
+				DC3E24F653541B13E0679F77 /* PhotoScanner.swift in Sources */,
+				955C2C242C0AD7EA54E8196A /* PhotoView.swift in Sources */,
+				A0FB6D0A4B85E96924AEDC2E /* PreviewLoader.swift in Sources */,
+				64977E666F7F0B62511A9551 /* SiftRAWApp.swift in Sources */,
+				2D66C8FEABB9F60E014F8A97 /* ThumbnailStrip.swift in Sources */,
+				42F12D5B91B1E4C52818458A /* ToolbarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		08C0ECC376F61F937F0DDF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = SiftRAW/SiftRAW.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SiftRAW/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jileihao.SiftRAW;
+				PRODUCT_NAME = SiftRAW;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		0F4819DE7B9D0D9364A4CB86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		65BF2473E79F18DAE560D950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = SiftRAW/SiftRAW.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SiftRAW/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jileihao.SiftRAW;
+				PRODUCT_NAME = SiftRAW;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		BC8D805D923A551779C08751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75BF4B5128B23765928A07A5 /* Build configuration list for PBXProject "SiftRAW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC8D805D923A551779C08751 /* Debug */,
+				0F4819DE7B9D0D9364A4CB86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7C070F8E72AB77F6B332CD58 /* Build configuration list for PBXNativeTarget "SiftRAW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08C0ECC376F61F937F0DDF05 /* Debug */,
+				65BF2473E79F18DAE560D950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8186F23ED148518467317948 /* Project object */;
+}
