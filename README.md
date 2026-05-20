@@ -48,3 +48,16 @@ Then hit Run in Xcode (or `xcodebuild -scheme SiftRAW build`).
 
 - XMP / star ratings, direct deletion, video (`.MP4`), recursive multi-folder
   scans, decision persistence across restarts, SD-card auto-mount.
+
+## License
+
+Source code is released under the [MIT License](LICENSE). You are free to use,
+modify, and redistribute the code, including for commercial purposes.
+
+## Trademark
+
+**"SiftRAW"** and the SiftRAW name and branding are trademarks of Jilei Hao.
+The MIT license covers the source code only — it does **not** grant permission
+to use the "SiftRAW" name, logo, or App Store identity for forks or derivative
+works. If you fork this project and distribute it (App Store, Homebrew, direct
+download, etc.), please ship it under a different name.
