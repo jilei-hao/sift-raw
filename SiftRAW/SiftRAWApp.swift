@@ -36,6 +36,10 @@ struct SiftRAWApp: App {
                 .keyboardShortcut(.return, modifiers: [.command])
             }
         }
+
+        Settings {
+            PreferencesView()
+        }
     }
 }
 

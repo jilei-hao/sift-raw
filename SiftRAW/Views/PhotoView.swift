@@ -3,8 +3,10 @@ import AppKit
 
 struct PhotoView: View {
     @EnvironmentObject var session: CullSession
+    @AppStorage(UserPrefs.prefetchRadiusKey) private var prefetchRadius: Int = UserPrefs.defaultPrefetchRadius
     @State private var image: NSImage?
     @State private var loadingID: String?
+    @State private var windowDebounce: Task<Void, Never>?
 
     var body: some View {
         GeometryReader { geo in
@@ -23,8 +25,22 @@ struct PhotoView: View {
             .onChange(of: geo.size) { _ in
                 loadCurrent(size: geo.size)
             }
+            .onChange(of: prefetchRadius) { _ in
+                // Settings changes are an explicit user action — refresh
+                // immediately rather than waiting on the scroll debounce so
+                // the new radius takes effect right away.
+                windowDebounce?.cancel()
+                windowDebounce = nil
+                let scale = NSScreen.main?.backingScaleFactor ?? 2
+                let target = max(geo.size.width, geo.size.height) * scale
+                Task { await refreshWindow(target: target) }
+            }
             .onAppear {
                 loadCurrent(size: geo.size)
+            }
+            .onDisappear {
+                windowDebounce?.cancel()
+                windowDebounce = nil
             }
         }
     }
@@ -116,9 +132,14 @@ struct PhotoView: View {
         }
     }
 
+    private static let windowDebounceNanos: UInt64 = 750_000_000
+
     private func loadCurrent(size: CGSize) {
         guard let group = session.currentGroup else {
             image = nil
+            windowDebounce?.cancel()
+            windowDebounce = nil
+            Task { await PreviewLoader.shared.setActiveWindow([]) }
             return
         }
         let token = group.id
@@ -126,6 +147,9 @@ struct PhotoView: View {
         let scale = NSScreen.main?.backingScaleFactor ?? 2
         let target = max(size.width, size.height) * scale
 
+        // Load the visible photo immediately at high priority. If the previous
+        // window had already scheduled this key as a prefetch, this joins that
+        // in-flight task and Swift escalates its priority automatically.
         Task {
             let img = await PreviewLoader.shared.load(url: group.previewURL, maxPixelSize: target)
             await MainActor.run {
@@ -133,16 +157,49 @@ struct PhotoView: View {
                     image = img
                 }
             }
-            await prefetchNeighbors(target: target)
+        }
+
+        scheduleWindowRefresh(target: target)
+    }
+
+    // Debounce the ±10 window so fast scrolling doesn't thrash the cache: each
+    // arrow press would otherwise cancel and re-schedule 21 prefetches that
+    // never get a chance to finish. The window only slides after the user
+    // pauses for `windowDebounceNanos`. In-flight prefetches from the previous
+    // window keep running during the wait — anything no longer wanted is
+    // cancelled by the next setActiveWindow call.
+    private func scheduleWindowRefresh(target: CGFloat) {
+        windowDebounce?.cancel()
+        windowDebounce = Task {
+            try? await Task.sleep(nanoseconds: Self.windowDebounceNanos)
+            if Task.isCancelled { return }
+            await refreshWindow(target: target)
         }
     }
 
-    private func prefetchNeighbors(target: CGFloat) async {
+    private func refreshWindow(target: CGFloat) async {
         let groups = session.groups
         let idx = session.currentIndex
-        let neighbors = [idx + 1, idx - 1].filter { groups.indices.contains($0) }
-        for n in neighbors {
-            await PreviewLoader.shared.prefetch(url: groups[n].previewURL, maxPixelSize: target)
+        guard groups.indices.contains(idx) else {
+            await PreviewLoader.shared.setActiveWindow([])
+            return
         }
+
+        let radius = UserPrefs.clampedPrefetchRadius(prefetchRadius)
+        var requests: [PreviewLoader.Request] = []
+        requests.append(.init(url: groups[idx].previewURL, maxPixelSize: target))
+        if radius > 0 {
+            for offset in 1...radius {
+                let forward = idx + offset
+                if groups.indices.contains(forward) {
+                    requests.append(.init(url: groups[forward].previewURL, maxPixelSize: target))
+                }
+                let backward = idx - offset
+                if groups.indices.contains(backward) {
+                    requests.append(.init(url: groups[backward].previewURL, maxPixelSize: target))
+                }
+            }
+        }
+        await PreviewLoader.shared.setActiveWindow(requests)
     }
 }

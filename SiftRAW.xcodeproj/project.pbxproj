@@ -11,6 +11,8 @@
 		108AE1E6CAC20AB7DCC9BBF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33AB0EEF0BAC60D89DAA2EF /* ContentView.swift */; };
 		153899C1AB212570F9D8E1FF /* CullSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B6D8CD5971C93AE3D3AE75 /* CullSession.swift */; };
 		2D66C8FEABB9F60E014F8A97 /* ThumbnailStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789295895AB384010FDA508 /* ThumbnailStrip.swift */; };
+		36DE7A6B4F1BDB2B9E0D87DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343CDE8290E3DB00C50998AF /* Assets.xcassets */; };
+		3E5BFBE8B69D948727988B9A /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01411703ADBED1A66C028989 /* PreferencesView.swift */; };
 		42F12D5B91B1E4C52818458A /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F00508A0CEBA5E43BB262D /* ToolbarView.swift */; };
 		64977E666F7F0B62511A9551 /* SiftRAWApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1533E2399476E72777D815A0 /* SiftRAWApp.swift */; };
 		955C2C242C0AD7EA54E8196A /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA88DDAA0C91B7671A0B06A /* PhotoView.swift */; };
@@ -20,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01411703ADBED1A66C028989 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		1533E2399476E72777D815A0 /* SiftRAWApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiftRAWApp.swift; sourceTree = "<group>"; };
 		1C38AA6AAAEE0AE5CF4CF996 /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
+		343CDE8290E3DB00C50998AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		354EA034CF1990E5B5780347 /* Applier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applier.swift; sourceTree = "<group>"; };
 		3789295895AB384010FDA508 /* ThumbnailStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailStrip.swift; sourceTree = "<group>"; };
 		4D1F139FEF6119AB1FCAF44D /* PreviewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLoader.swift; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA88DDAA0C91B7671A0B06A /* PhotoView.swift */,
+				01411703ADBED1A66C028989 /* PreferencesView.swift */,
 				3789295895AB384010FDA508 /* ThumbnailStrip.swift */,
 				F4F00508A0CEBA5E43BB262D /* ToolbarView.swift */,
 			);
@@ -75,6 +80,7 @@
 		B2B235C331CB2025B0102C32 /* SiftRAW */ = {
 			isa = PBXGroup;
 			children = (
+				343CDE8290E3DB00C50998AF /* Assets.xcassets */,
 				F33AB0EEF0BAC60D89DAA2EF /* ContentView.swift */,
 				1533E2399476E72777D815A0 /* SiftRAWApp.swift */,
 				10162E1245D9EA5D3895B631 /* Model */,
@@ -91,6 +97,7 @@
 			buildConfigurationList = 7C070F8E72AB77F6B332CD58 /* Build configuration list for PBXNativeTarget "SiftRAW" */;
 			buildPhases = (
 				0A3D2F2398AB296397816050 /* Sources */,
+				07574B2B54CE17A6B694C207 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +144,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		07574B2B54CE17A6B694C207 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36DE7A6B4F1BDB2B9E0D87DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A3D2F2398AB296397816050 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,6 +166,7 @@
 				EE1555AC839DB3DA420CA60A /* PhotoGroup.swift in Sources */,
 				DC3E24F653541B13E0679F77 /* PhotoScanner.swift in Sources */,
 				955C2C242C0AD7EA54E8196A /* PhotoView.swift in Sources */,
+				3E5BFBE8B69D948727988B9A /* PreferencesView.swift in Sources */,
 				A0FB6D0A4B85E96924AEDC2E /* PreviewLoader.swift in Sources */,
 				64977E666F7F0B62511A9551 /* SiftRAWApp.swift in Sources */,
 				2D66C8FEABB9F60E014F8A97 /* ThumbnailStrip.swift in Sources */,
@@ -161,7 +180,7 @@
 		08C0ECC376F61F937F0DDF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SiftRAW/SiftRAW.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -242,7 +261,7 @@
 		65BF2473E79F18DAE560D950 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SiftRAW/SiftRAW.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
